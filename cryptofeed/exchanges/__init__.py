@@ -25,7 +25,8 @@ from .bitmex import Bitmex
 from .bitstamp import Bitstamp
 from .bittrex import Bittrex
 from .blockchain import Blockchain
-from .bybit import Bybit
+# from .bybit import Bybit
+from .bybit_v5 import Bybit
 from .coinbase import Coinbase
 from .cryptodotcom import CryptoDotCom
 from .delta import Delta

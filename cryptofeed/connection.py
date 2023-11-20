@@ -9,7 +9,7 @@ import time
 import asyncio
 from asyncio import Queue, CancelledError
 from contextlib import asynccontextmanager, suppress
-from typing import List, Union, AsyncIterable
+from typing import List, Tuple, Union, Optional, AsyncIterable
 from decimal import Decimal
 import atexit
 from dataclasses import dataclass
@@ -350,7 +350,7 @@ class WSAsyncConn(AsyncConnection):
 class WebsocketEndpoint:
     address: str
     sandbox: str = None
-    instrument_filter: str = None
+    instrument_filter: Optional[Tuple[str, Tuple[str]]] = None
     channel_filter: str = None
     limit: int = None
     options: dict = None
